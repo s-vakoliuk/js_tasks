@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework</title>
+</head>
+<body>
+
+<script>
+  // Створити 3 змінних firstName, middleName, lastName, наповнити їх своїм ПІБ.
+  // З'єднати їх в одну змінну person. (Не об'єкт)
+let firstName='Vakoliuk',
+lastName='Serhii',
+middleName='Viktrovych';
+let person=(firstName+' '+lastName+' '+middleName);
+console.log(person);
+//За допомогою 3х різних prompt() отримати 3 слова які являються вашими Імям, По-Батькові та роками.
+//Вивести "Вітаю *Імя* *По батькові*. Тобі *вік* років".
+// Тебе 100 лет!
+
+firstName = prompt('Введи своє прізвище');
+lastName = prompt('Введи своє прізвище');
+age = prompt('Введи свій вік');
+
+// document.write(`<h1>Вітаю, ${firstName+' '+lastName} тобі ${age} років</h1>`);
+age=100;
+alert(`Тобі ${age} років!`);
+</script>
+
+</body>
+</html>

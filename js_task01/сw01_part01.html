@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Classwork01</title>
+</head>
+<body>
+
+<script>
+// 1. Створити масив з 10 чисел (можна використовувати Math.random Та Math.floor). Скласти результат цих чисел в змінній result.
+let numbers=[];// Оголошення порожнього масиву
+numbers[0]=Math.floor(Math.random() * 100);//Генерація випадкового числа від 0 до 100 і збереження до інтексу 0
+numbers[1]=Math.floor(Math.random() * 100);//Генерація випадкового числа від 0 до 100 і збереження до інтексу 1
+numbers[2]=Math.floor(Math.random() * 100);//Генерація випадкового числа від 0 до 100 і збереження до інтексу 2
+numbers[3]=Math.floor(Math.random() * 100);//Генерація випадкового числа від 0 до 100 і збереження до інтексу 3
+numbers[4]=Math.floor(Math.random() * 100);//Генерація випадкового числа від 0 до 100 і збереження до інтексу 4
+numbers[5]=Math.floor(Math.random() * 100);//Генерація випадкового числа від 0 до 100 і збереження до інтексу 5
+numbers[6]=Math.floor(Math.random() * 100);//Генерація випадкового числа від 0 до 100 і збереження до інтексу 6
+numbers[7]=Math.floor(Math.random() * 100);//Генерація випадкового числа від 0 до 100 і збереження до інтексу 7
+numbers[8]=Math.floor(Math.random() * 100);//Генерація випадкового числа від 0 до 100 і збереження до інтексу 8
+numbers[9]=Math.floor(Math.random() * 100);//Генерація випадкового числа від 0 до 100 і збереження до інтексу 9
+
+console.log(numbers);
+//Якщо без циклу, то для візуалізації і розуміння нижче наведено результат суми вмісту елементів масиву чисел
+suma=numbers[0]+numbers[1]+numbers[2]+numbers[3]+numbers[4]+numbers[5]+numbers[6]+numbers[7]+numbers[8]+numbers[9];
+console.log(suma);
+
+// 2. Створити об'єкт book з наступними полями  - назва, кількість сторінок, жанр
+let book1={
+  name:'Kozak',
+  pages:330,
+  genre:'history',
+};
+console.log(book1);
+
+// 3. Створити об'єкт book з наступними полями  - назва, кількість сторінок, жанр, автори
+let book2={
+  name:'Kozak',
+  pages:330,
+  genre:'history',
+  author:'noname',
+};
+console.log(book2);
+
+// 4. Створити масив об'єктів book з наступними полями - назва, кількість сторінок, жанр, автори. Вивести кожну книгу як окремий об'єкт
+let books=[
+  {name:'', pages:'', genre:'', author:''},
+  {name:'', pages:'', genre:'', author:''},
+  {name:'', pages:'', genre:'', author:''},
+  {name:'', pages:'', genre:'', author:''}
+];
+console.log(books);
+
+// 5. Напишіть код, який вираховує площу прямокутника висотою 23см. (змінна height) та шириною 10см (змінна width).
+// Значення площі зберігати в змінній s.
+let height=23, width=10, square;
+square=height*width;
+console.log(square);
+
+// 6. Напиши код, який знаходить об'єм циліндра заввишки 10м (змінна heightC) та діаметром основи 4м (dC),
+// результат помістіть у змінну v.
+let hCylinder=10, dCylinder=4, vCylinder, rCylinder;
+rCylinder=dCylinder/2;
+vCylinder=3.14*(rCylinder**2)*hCylinder;
+console.log(vCylinder);
+
+// 7. У прямокутного трикутника дві сторони n (зі значенням 3) та m (зі значенням 4).
+// Знайдіть гіпотенузу k за теоремою Піфагора (потрібно використовувати функцію Math.pow (число, ступінь) або оператор зведення в ступінь **).
+
+let n=3, m=4, hypotenuse;
+hypotenuse=Math.sqrt((n**2)+(m**2));
+console.log(hypotenuse);
+</script>
+
+</body>
+</html>

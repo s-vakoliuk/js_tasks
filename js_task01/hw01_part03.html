@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework</title>
+</head>
+<body>
+
+<script>
+// - За допомогою оператора typeof визначити типи наступних змінних та вивести їх в консоль.
+// let a = 100; let b = '100'; let c = true;
+let a = 100;
+let b = '100';
+let c = true;
+
+console.log(typeof(a));
+console.log(typeof(b));
+console.log(typeof(c));
+// - Визначити відповідний оператор в виразах що б вийшов відповідний результат.
+// В однакових виразах не використовувати однакові оператори!!!
+console.log(5 < 6); //-> true
+console.log(5 > 6); //-> false
+console.log(5 == 6); // -> false
+console.log(5 === 6); // -> false
+console.log(10 == 10); // -> true
+console.log(10 === 10); // -> true
+console.log(10 != 10); // -> false
+console.log(10 > 10); // -> false
+console.log(10 < 10);// -> false
+console.log(123 < '123'); // -> false
+console.log(123 == '123');// -> true
+
+// - Подумайте які значения виведе в вікно браузера наступний фрагмент коду?  і чому?
+//     let str = "20";
+//      let d = 5;
+//      document.write(str + a + "<br/>");
+//      document.write(str - a + "<br/>");
+//      document.write(str * "2" + "<br/>");
+//      document.write(str / 2 + "<br/>");
+
+let str = "20";
+let d = 5;
+document.write(str + d + "<br/>"); //Виведе 205, тому що, об'єднує 20 до числа 5
+document.write(str - d + "<br/>"); //Виведе 15, тому що, рядок стає числом, а отже 20-5=15
+document.write(str * "2" + "<br/>"); //Виведе 40, тому що, рядок стає числом, а "2" це число у html документі отже 20*2=40
+document.write(str / 2 + "<br/>"); //Виведе 40, тому що, рядок стає числом, а отже 20*2=40
+
+</script>
+
+</body>
+</html>
