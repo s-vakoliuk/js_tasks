@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Additioal03</title>
+</head>
+<body>
+
+<script>
+    // 1. Створити пустий масив та :
+    //    a. заповнити його 50 парними числами за допомоги циклу.
+    // let evenNumbers=0;
+    // let evenNumArray=[];
+    // for (let index = 0; index < 51; index++) {
+    //     evenNumbers=Math.floor(Math.random() * 100)+1;
+    //     if( evenNumbers % 2 === 0){
+    //         evenNumArray=evenNumbers;
+    //     }
+    //     document.write(`<div>Index ${index} - ${evenNumArray}</div>`);
+    // }
+//-------------------------------------------------------------------
+    // b. заповнити його 50 непарними числами за допомоги циклу.
+    // let evenNumbers=0;
+    // let evenNumArray=[];
+    // for (let index = 0; index < 51; index++) {
+    //     evenNumbers=Math.floor(Math.random() * 100)+1;
+    //     if( evenNumbers % 2 === 1){
+    //         evenNumArray=evenNumbers;
+    //     }
+    //     document.write(`<div>Index ${index} - ${evenNumArray}</div>`);
+    // }
+    //    c. Заповнити масив 20ма рандомними числами. (Google: Generate random number JS)
+    //    d. Заповнити масив 20ма рандомними чисалами в діапазоні від 8 до 732 (Google: Generate random number JS)
+// 2. Вивести за допомогою console.log кожен третій елемент
+//     let evenNumArray=[];
+//     for (let index = 0; index < 51; index=index+3) {
+//         evenNumArray=Math.floor(Math.random() * 100)+1;
+//         console.log('index:',index, evenNumArray);
+//     }
+//-------------------------------------------------
+    //3. Вивести за допомогою console.log кожен третій елемен тільки якщо цей елемент є парним.
+    // let evenNumbers=0;
+    // let evenNumArray=[];
+    // for (let index = 0; index < 51; index=index+3) {
+    //     evenNumbers=Math.floor(Math.random() * 100)+1;
+    //     if( evenNumbers % 2 === 0){
+    //         evenNumArray=evenNumbers;
+    //     }
+    //     console.log('index:',index, evenNumArray);
+    // }
+//---------------------------------------------------
+// 4. Вивести за допомогою console.log кожен третій елемен тільки якщо цей елемент є парним та записати їх в новий масив
+//     let evenNumbers=0;
+//     let evenNumArray=[];
+//     let newEvenNumArray=[];
+//     let index = 0
+//     for (index = 0; index < 51; index=index+3) {
+//         evenNumbers=Math.floor(Math.random() * 100)+1;
+//         if( evenNumbers % 2 === 0){
+//             evenNumArray=evenNumbers;
+//         }
+//         console.log('index:',index, evenNumArray);
+//         newEvenNumArray=evenNumArray;
+//         console.log('newEvenNumArray',newEvenNumArray);
+//     }
+//-----------------------------------------------------
+// 5. Вивести кожен елемент масиву, сусід справа якого є парним
+// EXAMPLE: [ 1, 2, 3, 5, 7, 9, 56, 8, 67 ] -> Має бути виведено 1, 9, 56
+    let numArray=[ 1, 2, 3, 5, 7, 9, 56, 8, 67 ];
+    let numNewArray=[];
+    let index = 0;
+    for (index = 0; index < (numArray.length-1); index++) {
+        // if (numArray%2===0){
+            numNewArray=numArray;
+            console.log(numNewArray);
+        // }
+    }
+
+
+
+</script>
+
+</body>
+</html>
