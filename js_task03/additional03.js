@@ -163,7 +163,6 @@ let usersWithId = [
 for (const user of usersWithCities){
     for (const key in user) {
     }
-    console.log("usersWithCities",usersWithCities);
 }
 console.log("usersWithCities",usersWithCities);
 
