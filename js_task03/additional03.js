@@ -143,21 +143,30 @@ let usersWithId = [
     {id: 3, name: 'kolya', age: 29, status: true},
     {id: 4, name: 'olya', age: 28, status: false}
 ];
-for (let i in usersWithId) {
-    console.log(i);//-виведення індексу масиву об'єктів
-    for (const key in usersWithId[i]) {
-        console.log(key + ": " + usersWithId[i][key] + ", ");//-виведення обєкту з масиву
-    }
-}
 
-// let citiesWithId = [
-//     {user_id: 3, country: 'USA', city: 'Portland'},
-//     {user_id: 1, country: 'Ukraine', city: 'Ternopil'},
-//     {user_id: 2, country: 'Poland', city: 'Krakow'},
-//     {user_id: 4, country: 'USA', city: 'Miami'}
-// ];
-// let usersWithCities = [];
-//
+ let citiesWithId = [
+    {user_id: 3, country: 'USA', city: 'Portland'},
+    {user_id: 1, country: 'Ukraine', city: 'Ternopil'},
+    {user_id: 2, country: 'Poland', city: 'Krakow'},
+    {user_id: 4, country: 'USA', city: 'Miami'}
+];
+ let usersWithCities=[];
+ usersWithId[0].adress=citiesWithId[1];//додаємо до масиву ключ adress та значення з масиву citiesWithId
+ usersWithCities[0]=usersWithId[0];
+ usersWithId[1].adress=citiesWithId[2];//додаємо до масиву ключ adress та значення з масиву citiesWithId
+ usersWithCities[1]=usersWithId[1];
+ usersWithId[2].adress=citiesWithId[0];//додаємо до масиву ключ adress та значення з масиву citiesWithId
+ usersWithCities[2]=usersWithId[2];
+ usersWithId[3].adress=citiesWithId[3];//додаємо до масиву ключ adress та значення з масиву citiesWithId
+ usersWithCities[3]=usersWithId[3];
+
+for (const user of usersWithCities){
+    for (const key in user) {
+    }
+    console.log("usersWithCities",usersWithCities);
+}
+console.log("usersWithCities",usersWithCities);
+
 // - Взяти масив з 10 чисел або створити його. Вивести в консоль тільки ті елементи, значення яких є парними.
 // let numArray=[76, 9, 47 ,53, 78, 12, 33,65,88, 90];
 // console.log('numArray', numArray);
@@ -167,7 +176,8 @@ for (let i in usersWithId) {
 //     }
 // }
 //---------------------------------------------------
-// - Взяти масив з 10 чисел або створити його. Створити 2й порожній масив. За допомогою будь-якого циклу скопіювати значення одного масиву в інший.
+// - Взяти масив з 10 чисел або створити його. Створити 2й порожній масив.
+// За допомогою будь-якого циклу скопіювати значення одного масиву в інший.
 //     let firstArray=[];
 //     let secondArray=[];
 //     for (let index = 0; index < 10; index++) {
