@@ -150,21 +150,19 @@ let usersWithId = [
     {user_id: 2, country: 'Poland', city: 'Krakow'},
     {user_id: 4, country: 'USA', city: 'Miami'}
 ];
- let usersWithCities=[];
- usersWithId[0].adress=citiesWithId[1];//додаємо до масиву ключ adress та значення з масиву citiesWithId
- usersWithCities[0]=usersWithId[0];
- usersWithId[1].adress=citiesWithId[2];//додаємо до масиву ключ adress та значення з масиву citiesWithId
- usersWithCities[1]=usersWithId[1];
- usersWithId[2].adress=citiesWithId[0];//додаємо до масиву ключ adress та значення з масиву citiesWithId
- usersWithCities[2]=usersWithId[2];
- usersWithId[3].adress=citiesWithId[3];//додаємо до масиву ключ adress та значення з масиву citiesWithId
- usersWithCities[3]=usersWithId[3];
 
-for (const user of usersWithCities){
-    for (const key in user) {
-    }
-}
-console.log("usersWithCities",usersWithCities);
+ let usersWithCities=[];
+
+ for (let i = 0; i < usersWithId.length; i++) {
+     let user = usersWithId[i];
+     for (const address of citiesWithId) {
+         if (address.user_id === user.id) {
+             user.address = address;
+         }
+     }
+ }
+ usersWithCities=usersWithId;
+ console.log(usersWithCities);
 
 // - Взяти масив з 10 чисел або створити його. Вивести в консоль тільки ті елементи, значення яких є парними.
 // let numArray=[76, 9, 47 ,53, 78, 12, 33,65,88, 90];

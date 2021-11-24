@@ -30,14 +30,15 @@
 // let user=[{name: 'Dima', age: 13}, {model: 'Camry'}];
 // function calcFieldsObject(array){
 //     let keysArray = [];
-//     let key=0;
-//     for (let index of array) {
-//         for (key in index) {
-//             keysArray[key]=key;
+//     for (let i = 0, l = array.length; i < l; i++) {
+//         let items = array[i];
+//         let keys = Object.keys(items);
+//         for (let j = 0, k = keys.length; j < k; j++) {
+//             keysArray=keys[j];
 //         }
 //     }
-//     return keysArray;
-// }
+//     return valuesArray;
+// };
 // console.log(calcFieldsObject(user));
 
 // - Створити функцію яка приймає масив будь яких объектів, та повертає масив значень всіх обєктів
@@ -45,15 +46,14 @@
 // [{name: 'Dima', age: 13}, {model: 'Camry'}]  ===> [ Dima, 13, Camry ]
 // let user=[{name: 'Dima', age: 13}, {model: 'Camry'}];
 // function calcFieldsObject(array){
-//     let keysArray = [];
-//     let value=0;
-//     let key=0;
-//     for (let index of array) {
-//         for (key in index) {
-//             value = index[key];
-//             keysArray[value]=value;
-//             }
+//     let valuesArray = [];
+//     for (let i = 0, l = array.length; i < l; i++) {
+//         let items = array[i];
+//         let keys = Object.keys(items);
+//         for (let j = 0, k = keys.length; j < k; j++) {
+//             valuesArray=items[keys[j]];
 //         }
-//     return keysArray;
+//     }
+//     return valuesArray;
 // };
 // console.log(calcFieldsObject(user));
