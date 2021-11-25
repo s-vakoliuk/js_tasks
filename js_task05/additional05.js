@@ -60,7 +60,7 @@ let orderlyArray=(numArray)=> {
     }
     for (let index = position; index < numArray.length; index++) {
         numArray[position++] = 0;
-        return numArray;
     }
+    return numArray;
 };
 console.log('Впорядкований масив: ', orderlyArray(1,0,6,0,3));
