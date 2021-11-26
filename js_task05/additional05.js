@@ -39,6 +39,26 @@
 //   foo([9,8,0,4], 1) // ==> [ 9 ,0, 8, 4 ]
 //   foo([9,8,0,4], 2) // ==> [ 9, 8, 4, 0 ]
 
+let numArray=[9,8,0,4];
+console.log('Початковий масив',numArray);
+
+let number = 0;
+
+for (let i = 0; i < numArray.length; i++) {
+    if (numArray[i]===number) {
+
+        // for (let i = 0; i < numArray.length; i++)
+        numArray[numArray[i]]=number;
+        // console.log('Значення',numArray[i]);
+    }
+}
+console.log('Оброблений масив',numArray);
+
+// for (var i = 0; i < items.length; i++)
+//     if (items[i] == 3452)
+//         items[i] = 1010;
+
+
 // - Сворити функцію яка буде переносити елементи з значенням 0 у кінець масиву. Зберігаючи при цьому порядок не нульових значень.
 // Двожина масиву від 2 до 100
 // EXAMPLE:
@@ -46,21 +66,24 @@
 // [0,1,2,3,4] => [1,2,3,4,0]
 // [0,0,1,0]   => [1,0,0,0]
 
-
 // let numArray=[1,0,6,0,3];
 // let numArray=[0,1,2,3,4];
 // let numArray=[0,0,1,0];
-let orderlyArray=(numArray)=> {
-    let position = 0;
-    for (let index = 0; index < numArray.length; index++) {
-        if (numArray[index] != 0) {
-            numArray[position] = numArray[index];
-            position++;
-        }
-    }
-    for (let index = position; index < numArray.length; index++) {
-        numArray[position++] = 0;
-    }
-    return numArray;
-};
-console.log('Впорядкований масив: ', orderlyArray(1,0,6,0,3));
+
+// let orderlyArray=(numArray)=> {
+//     let position = 0;
+//     for (let index = 0; index < numArray.length; index++) {
+//         if (numArray[index] != 0) {
+//             numArray[position] = numArray[index];
+//             position++;
+//         }
+//     }
+//
+//     for (let index = position; index < numArray.length; index++) {
+//         numArray[position++] = 0;
+//     }
+//     return numArray;
+// };
+// console.log('Впорядкований масив: ', orderlyArray(1,0,6,0,3));
+
+
