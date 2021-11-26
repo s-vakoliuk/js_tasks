@@ -39,23 +39,19 @@
 //   foo([9,8,0,4], 1) // ==> [ 9 ,0, 8, 4 ]
 //   foo([9,8,0,4], 2) // ==> [ 9, 8, 4, 0 ]
 
-let numArray=[9,8,0,4];
-console.log('Початковий масив',numArray);
-
-let number = 2;
-let lenArray=(numArray.length)-1;
-let index=0;
-while (number>=numArray[index]){
-    index=index+1;
-}
-let count=lenArray-index;
-let position=lenArray-1;
-for (let i = 0; i < count; i++) {
-    numArray[position+1]=numArray[position];
-    position=position-1;
-}
-numArray[index]=number;
-console.log('Оброблений масив',numArray);
+// let numArray=[9,8,0,4];
+// let changeArray=(numArray)=> {
+//     console.log('Початковий масив', numArray);
+//     let number = 2;
+//     for (let index = 0; index < numArray.length; index++) {
+//         if (index === number) {
+//             [numArray[index], numArray[index + 1]] = [numArray[index + 1], numArray[index]];
+//         }
+//     }
+//     return numArray;
+// };
+//
+// console.log('Оброблений масив',changeArray(numArray));
 
 // - Сворити функцію яка буде переносити елементи з значенням 0 у кінець масиву. Зберігаючи при цьому порядок не нульових значень.
 // Двожина масиву від 2 до 100
