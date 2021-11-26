@@ -42,22 +42,20 @@
 let numArray=[9,8,0,4];
 console.log('Початковий масив',numArray);
 
-let number = 0;
-
-for (let i = 0; i < numArray.length; i++) {
-    if (numArray[i]===number) {
-
-        // for (let i = 0; i < numArray.length; i++)
-        numArray[numArray[i]]=number;
-        // console.log('Значення',numArray[i]);
-    }
+let number = 2;
+let lenArray=(numArray.length)-1;
+let index=0;
+while (number>=numArray[index]){
+    index=index+1;
 }
+let count=lenArray-index;
+let position=lenArray-1;
+for (let i = 0; i < count; i++) {
+    numArray[position+1]=numArray[position];
+    position=position-1;
+}
+numArray[index]=number;
 console.log('Оброблений масив',numArray);
-
-// for (var i = 0; i < items.length; i++)
-//     if (items[i] == 3452)
-//         items[i] = 1010;
-
 
 // - Сворити функцію яка буде переносити елементи з значенням 0 у кінець масиву. Зберігаючи при цьому порядок не нульових значень.
 // Двожина масиву від 2 до 100
