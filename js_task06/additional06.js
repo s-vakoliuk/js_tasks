@@ -68,77 +68,77 @@
 // document.writeln(cutString(string, n));
 
 // - Є масив
-// let coursesArray = [
-//              {
-//                  title: 'JavaScript Complex',
-//                  monthDuration: 5,
-//                  hourDuration: 909,
-//                  modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'node.js']
-//              },
-//              {
-//                  title: 'Java Complex',
-//                  monthDuration: 6,
-//                  hourDuration: 909,
-//                  modules: ['html',
-//                      'css',
-//                      'js',
-//                      'mysql',
-//                      'mongodb',
-//                      'angular',
-//                      'aws',
-//                      'docker',
-//                      'git',
-//                      'java core',
-//                      'java advanced']
-//              },
-//              {
-//                  title: 'Python Complex',
-//                  monthDuration: 6,
-//                  hourDuration: 909,
-//                  modules: ['html',
-//                      'css',
-//                      'js',
-//                      'mysql',
-//                      'mongodb',
-//                      'angular',
-//                      'aws',
-//                      'docker',
-//                      'python core',
-//                      'python advanced']
-//              },
-//              {
-//                  title: 'QA Complex',
-//                  monthDuration: 4,
-//                  hourDuration: 909,
-//                  modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'git', 'QA/QC']
-//              },
-//              {
-//                  title: 'FullStack',
-//                  monthDuration: 7,
-//                  hourDuration: 909,
-//                  modules: ['html',
-//                      'css',
-//                      'js',
-//                      'mysql',
-//                      'mongodb',
-//                      'react',
-//                      'angular',
-//                      'aws',
-//                      'docker',
-//                      'git',
-//                      'node.js',
-//                      'python',
-//                      'java']
-//              },
-//              {
-//                  title: 'Frontend',
-//                  monthDuration: 4,
-//                  hourDuration: 909,
-//                  modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
-//              }
-//          ];
-// console.log(coursesArray);
-// console.log('========================');
+let coursesArray = [
+             {
+                 title: 'JavaScript Complex',
+                 monthDuration: 5,
+                 hourDuration: 909,
+                 modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'node.js']
+             },
+             {
+                 title: 'Java Complex',
+                 monthDuration: 6,
+                 hourDuration: 909,
+                 modules: ['html',
+                     'css',
+                     'js',
+                     'mysql',
+                     'mongodb',
+                     'angular',
+                     'aws',
+                     'docker',
+                     'git',
+                     'java core',
+                     'java advanced']
+             },
+             {
+                 title: 'Python Complex',
+                 monthDuration: 6,
+                 hourDuration: 909,
+                 modules: ['html',
+                     'css',
+                     'js',
+                     'mysql',
+                     'mongodb',
+                     'angular',
+                     'aws',
+                     'docker',
+                     'python core',
+                     'python advanced']
+             },
+             {
+                 title: 'QA Complex',
+                 monthDuration: 4,
+                 hourDuration: 909,
+                 modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'git', 'QA/QC']
+             },
+             {
+                 title: 'FullStack',
+                 monthDuration: 7,
+                 hourDuration: 909,
+                 modules: ['html',
+                     'css',
+                     'js',
+                     'mysql',
+                     'mongodb',
+                     'react',
+                     'angular',
+                     'aws',
+                     'docker',
+                     'git',
+                     'node.js',
+                     'python',
+                     'java']
+             },
+             {
+                 title: 'Frontend',
+                 monthDuration: 4,
+                 hourDuration: 909,
+                 modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
+             }
+         ];
+console.log(coursesArray);
+console.log('=== Вхідний масив ===');
 // відсортувати його в спадаючому порядку за кількістю елементів в полі modules
 
 // coursesArray.sort(
@@ -153,12 +153,12 @@
 // console.log(coursesArray);
 
 //
-// function byField(field) {
-//   return (a, b) => a[field.length] > b[field.length] ? 1 : -1;
-// }
-//
-// coursesArray.sort(byField('modules'));
-// coursesArray.forEach(key => console.log(key.modules));
+function byField(field) {
+  return (a, b) => a[field.length] > b[field.length] ? 1 : -1;
+}
+
+coursesArray.sort(byField('modules'));
+coursesArray.forEach(key => console.log(key.modules));
 
 
 
@@ -178,10 +178,6 @@
 // });
 // console.log(newSortArray);
 
-
-// let newSortArray = console.log(newSortArray);.sort((a, b) => b.modules - a.modules);
-// console.log(newSortArray);
-// coursesArray.map(item=>console.log(item));
 
 
 
