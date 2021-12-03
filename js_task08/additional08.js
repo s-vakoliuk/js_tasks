@@ -18,7 +18,7 @@
 //   }
 // }
 
-console.log(arrayClasses);
+// console.log(arrayClasses);
 
 function countClassName () {
     let arrayClasses = [];
@@ -34,4 +34,4 @@ function countClassName () {
     }
 };
 
-console.log(arrayClasses);
+countClassName();
