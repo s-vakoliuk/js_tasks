@@ -248,35 +248,43 @@ usersList.forEach(item => {
     Object.entries(item.address).forEach(address => {
         const [key, value] = address;
         console.log(key, value);
-        // const streetDiv=document.createElement('div');
-        // const suiteDiv=document.createElement('div');
-        // const cityDiv=document.createElement('div');
-        // const zipcodeDiv=document.createElement('div');
-        // const geoDiv=document.createElement('div');
         const addressDiv = document.createElement('div');
-        addressDiv.innerText=address;
         addressDiv.classList.add('address');
-        // addressDiv.append(streetDiv);
-        document.body.appendChild(addressDiv);
-
+        addressDiv.innerText=address;
+        addressWrapDiv.appendChild(addressDiv);
     });
-    // addressWrapDiv.append(streetDiv, suiteDiv, cityDiv, zipcodeDiv, geoDiv);
-    // document.body.appendChild(addressWrapDiv);
-
+    // Object.entries(item.address.geo).forEach(geo => {
+    //         const [key, value] = geo;
+    //         const geoDiv = document.createElement('div');
+    //         console.log(key, value);
+    //         geoDiv.innerText=geo;
+    //         addressDiv.appendChild(geoDiv);
+    //     });
 
     const phoneDiv = document.createElement('div');
     const websiteDiv = document.createElement('div');
-    const companyDiv = document.createElement('div');
+    const companyWrapDiv = document.createElement('div');
+
+    Object.entries(item.company).forEach(company => {
+        const [key, value] = company;
+        console.log(key, value);
+        const companyDiv = document.createElement('div');
+        companyDiv.classList.add('company');
+        companyDiv.innerText=company;
+        companyWrapDiv.appendChild(companyDiv);
+    });
+
+
+
     idDiv.innerText = item.id;
     nameDiv.innerText = item.name;
     usernameDiv.innerText = item.username;
     emailDiv.innerText = item.email;
-    addressWrapDiv.innerText = item.address;
     phoneDiv.innerText = item.phone;
     websiteDiv.innerText = item.website;
-    companyDiv.innerText = item.company;
 
 
-    itemDiv.append(idDiv, nameDiv, usernameDiv, emailDiv, addressWrapDiv, phoneDiv, websiteDiv, companyDiv);
+
+    itemDiv.append(idDiv, nameDiv, usernameDiv, emailDiv, addressWrapDiv, phoneDiv, websiteDiv, companyWrapDiv);
     document.body.appendChild(itemDiv);
 });
