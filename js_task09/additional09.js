@@ -248,10 +248,18 @@ usersList.forEach(item => {
     Object.entries(item.address).forEach(address => {
         const [key, value] = address;
         console.log(key, value);
+        const geoDiv = document.createElement('div');
+        for (const geo in address.geo){
+            geoDiv.innerText = geo.geo;
+            console.log(geo);
+        }
+
         const addressDiv = document.createElement('div');
         addressDiv.classList.add('address');
         addressDiv.innerText=address;
+        addressDiv.appendChild(geoDiv);
         addressWrapDiv.appendChild(addressDiv);
+
     });
     // Object.entries(item.address.geo).forEach(geo => {
     //         const [key, value] = geo;
