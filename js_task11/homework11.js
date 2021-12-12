@@ -1,5 +1,5 @@
     // -створити форму з інпутами для name та age.
-    //     При відправці форми записати об'єкт в localstorage
+    //  При відправці форми записати об'єкт в localstorage
 
     // let { name, age } = document.forms.userForm; //через деструктуризацію
     let name = document.forms.userForm.name;
@@ -19,8 +19,8 @@
         save(name.value, age.value);
     }
 
-    // -створити форму з інпутами для model,type та volume автівки.
-    //     при відпарвці форми об'єкти зберігаються в масиві в локальному сховищі.
+    // - Створити форму з інпутами для model, type та volume автівки.
+    // - При відпарвці форми об'єкти зберігаються в масиві в локальному сховищі.
 
     // let {model, type, volume} = document.forms.carForm;  // деструктуризація
     let model = document.forms.carForm.model;
