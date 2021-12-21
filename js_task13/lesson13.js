@@ -1,19 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-
-<body>
-<form name="f1">
-    <input type="date" name="dateinput">
-    <button>swnd</button>
-
-</form>
-
-<script>
-
     // console.log('start')
     // try {
     //     console.log(a);
@@ -217,10 +201,3 @@
 
     let result = email.match(/[a-z]{1,}@asd.com/);
     console.log(result);
-
-
-</script>
-</body>
-</html>
-</body>
-</html>
