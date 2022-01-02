@@ -1,0 +1,36 @@
+/* Обнулення */
+a {
+	text-decoration: none;
+}
+
+ul,
+ol,
+li {
+	list-style: none;
+}
+
+/* Стилізація */
+h3{
+    color: blue;
+    size: 30px ;
+}
+.userId{
+    color: darkred;
+    size: 20px ;
+}
+.userName{
+     color: darkorange;
+    size: 20px ;
+}
+
+.user{
+    border: solid 2px blue;
+    border-radius: 10px;
+}
+
+.details{
+    width: 75px;
+    height: 50px;
+    background: darkorange;
+    border-radius: 10px;
+}
