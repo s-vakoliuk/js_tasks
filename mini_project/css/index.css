@@ -14,13 +14,22 @@ h3{
     color: blue;
     size: 30px ;
 }
+
+li {
+	margin: 10px;
+}
+
 .userId{
     color: darkred;
-    size: 20px ;
+    font-size: 20px;
+    font-weight: bold;
 }
+
+
 .userName{
-     color: darkorange;
-    size: 20px ;
+    color: blueviolet;
+    font-size: 20px ;
+    font-weight: bold;
 }
 
 .user{
@@ -28,7 +37,7 @@ h3{
     border-radius: 10px;
 }
 
-.details{
+.btnDetails{
     width: 75px;
     height: 50px;
     background: darkorange;

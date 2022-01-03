@@ -11,9 +11,9 @@ async function getResponse(){
     for (key in content){
         list.innerHTML+=`
             <li class="user">
-                <p class="userId">id - ${content[key].id}</p>
-                <p class="userName">name - ${content[key].name}</p>
-                <a class="details" href="user-details.html">Details about user</a>
+                <p class="userId">id: ${content[key].id}</p>
+                <p class="userName">name: ${content[key].name}</p>
+                <a class="btnDetails" href="user-details.html">Details about user</a>
             </li>
             `
     }
