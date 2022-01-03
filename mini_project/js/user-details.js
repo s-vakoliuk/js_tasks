@@ -1,8 +1,15 @@
 
-let userDetails=document.getElementsByClassName('userDetails')[0];
-let idNumber=1;
+let url=new URL(location.href);
+console.log(url);
+let idOfUser=url.searchParams.get('id');
+console.log(idOfUser);
+// let idOfUser=1
 
-fetch(`https://jsonplaceholder.typicode.com/users/${idNumber}`)
+
+let userDetails=document.getElementsByClassName('userDetails')[0];
+
+
+fetch(`https://jsonplaceholder.typicode.com/users/${idOfUser}`)
     .then(response => response.json())
     .then((userId) => {
         console.log(userId);
@@ -23,16 +30,17 @@ fetch(`https://jsonplaceholder.typicode.com/users/${idNumber}`)
         company: name - ${userId.company.name}; catchPhrase - ${userId.company.catchPhrase};bs - ${userId.company.bs};
         `
         userDetails.append(div);
-        let btnPost=document.createElement('button');
-        btnPost.innerText='Post of current user';
-        userDetails.append(btnPost);
+        let postDetails = document.createElement('a');
+        postDetails.innerText='post of current user';
+        postDetails.href = 'post-details.html?id='+post.id;
+
 });
 
 //---Posts----
 
 let userPosts=document.getElementsByClassName('userPosts')[0];
 
-fetch(`https://jsonplaceholder.typicode.com/users/${idNumber}/posts`)
+fetch(`https://jsonplaceholder.typicode.com/users/${idOfUser}/posts`)
     .then(response => response.json())
     .then((postId) => {
             console.log(postId);
@@ -48,5 +56,3 @@ fetch(`https://jsonplaceholder.typicode.com/users/${idNumber}/posts`)
                     userPosts.append(postDetails);
         }
     });
-
-
