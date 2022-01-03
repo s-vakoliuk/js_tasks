@@ -36,10 +36,16 @@ fetch(`https://jsonplaceholder.typicode.com/users/${idNumber}/posts`)
     .then(response => response.json())
     .then((postId) => {
             console.log(postId);
+            userPosts.innerHTML=``;
             for (const post of postId){
-            let li = document.createElement('li');
-            li.innerText += `title - ${post.title}`;
-            document.body.appendChild(li);
+                    let title = document.createElement('div');
+                    title.innerText = `title - ${post.title}`;
+                    let postDetails = document.createElement('a');
+                    postDetails.innerText='post of current user';
+                    postDetails.href = 'post-details.html?id='+post.id;
+
+                    userPosts.append(title);
+                    userPosts.append(postDetails);
         }
     });
 
