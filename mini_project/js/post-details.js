@@ -13,14 +13,25 @@ fetch(`https://jsonplaceholder.typicode.com/posts/${idOfPost}/comments`)
         console.log(idOfPost);
         postDetails.innerHTML=``;
         for (const post of idOfPost){
-            let name = document.createElement('div');
+            let postWrap =  document.createElement('div');
+            postWrap.style.background='yellow';
+            postWrap.style.color='blue';
+            postWrap.style.fontSize='20px';
+            postWrap.style.border= '2px solid blue';
+            postWrap.style.borderRadius= '10px';
+            postWrap.style.margin='10px';
+
+            let name = document.createElement('p');
             name.innerText = `name - ${post.name}`;
-            let email = document.createElement('div');
+            let email = document.createElement('p');
             email.innerText = `email - ${post.email}`;
-            let body = document.createElement('div');
+            let body = document.createElement('p');
             body.innerText = `body - ${post.body}`;
-            postDetails.append(name);
-            postDetails.append(email);
-            postDetails.append(body);
+
+            postWrap.append(name);
+            postWrap.append(email);
+            postWrap.append(body);
+
+            postDetails.appendChild( postWrap);
         }
     });

@@ -1,0 +1,19 @@
+/* Обнулення */
+a {
+	text-decoration: none;
+}
+
+ul,
+ol,
+li {
+	list-style: none;
+}
+
+h3{
+    color: olive;
+    size: 30px ;
+}
+
+.userDetails{
+    background: lightblue;
+}
