@@ -3,43 +3,12 @@ a {
 	text-decoration: none;
 }
 
-ul,
-ol,
-li {
+ul, ol, li {
 	list-style: none;
 }
 
 /* Стилізація */
 h3{
-    color: blue;
+    color: darkolivegreen;
     size: 30px ;
-}
-
-li {
-	margin: 10px;
-}
-
-.userId{
-    color: darkred;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-
-.userName{
-    color: blueviolet;
-    font-size: 20px ;
-    font-weight: bold;
-}
-
-.user{
-    border: solid 2px blue;
-    border-radius: 10px;
-}
-
-.btnDetails{
-    width: 75px;
-    height: 50px;
-    background: darkorange;
-    border-radius: 10px;
 }

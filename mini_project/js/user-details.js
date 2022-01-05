@@ -3,7 +3,6 @@ let url=new URL(location.href);
 console.log(url);
 let idOfUser=url.searchParams.get('id');
 console.log(idOfUser);
-// let idOfUser=1
 
 
 let userDetails=document.getElementsByClassName('userDetails')[0];
@@ -46,13 +45,32 @@ fetch(`https://jsonplaceholder.typicode.com/users/${idOfUser}/posts`)
             console.log(postId);
             userPosts.innerHTML=``;
             for (const post of postId){
-                    let title = document.createElement('div');
+                    let postWrap =  document.createElement('div');
+                    postWrap.style.background='lightgreen';
+                    postWrap.style.color='blue';
+                    postWrap.style.fontSize='20px';
+                    postWrap.style.border= '2px solid blue';
+                    postWrap.style.borderRadius= '10px';
+                    postWrap.style.margin='10px';
+
+                    // postWrap.style.width='400px';
+                    // postWrap.style.height='200px';
+
+                    let title = document.createElement('p');
+                    title.style.margin='10px';
                     title.innerText = `title - ${post.title}`;
+
+
                     let postDetails = document.createElement('a');
+                    postDetails.style.margin='10px';
+                    postDetails.style.background='yellow';
+                    postDetails.style.borderRadius='10px';
                     postDetails.innerText='post of current user';
                     postDetails.href = 'post-details.html?id='+post.id;
 
-                    userPosts.append(title);
-                    userPosts.append(postDetails);
+                    postWrap.append(title);
+                    postWrap.append(postDetails);
+
+                    userPosts.appendChild(postWrap);
         }
     });
