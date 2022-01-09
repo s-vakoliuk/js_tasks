@@ -29,9 +29,6 @@ fetch(`https://jsonplaceholder.typicode.com/users/${idOfUser}`)
         company: name - ${userId.company.name}; catchPhrase - ${userId.company.catchPhrase};bs - ${userId.company.bs};
         `
         userDetails.append(div);
-        let postDetails = document.createElement('a');
-        postDetails.innerText='post of current user';
-        postDetails.href = 'post-details.html?id='+post.id;
 
 });
 
@@ -49,12 +46,9 @@ fetch(`https://jsonplaceholder.typicode.com/users/${idOfUser}/posts`)
                     postWrap.style.background='lightgreen';
                     postWrap.style.color='blue';
                     postWrap.style.fontSize='20px';
-                    postWrap.style.border= '2px solid blue';
-                    postWrap.style.borderRadius= '10px';
+                    postWrap.style.border='2px solid blue';
+                    postWrap.style.borderRadius='10px';
                     postWrap.style.margin='10px';
-
-                    // postWrap.style.width='400px';
-                    // postWrap.style.height='200px';
 
                     let title = document.createElement('p');
                     title.style.margin='10px';
@@ -62,11 +56,13 @@ fetch(`https://jsonplaceholder.typicode.com/users/${idOfUser}/posts`)
 
 
                     let postDetails = document.createElement('a');
-                    postDetails.style.margin='10px';
+                    postDetails.innerText='Post of current user';
+                    postDetails.href = 'post-details.html?id='+post.id;
                     postDetails.style.background='yellow';
                     postDetails.style.borderRadius='10px';
-                    postDetails.innerText='post of current user';
-                    postDetails.href = 'post-details.html?id='+post.id;
+                    postDetails.style.width='200px';
+                    postDetails.style.height='50px';
+                    postDetails.style.margin='10px';
 
                     postWrap.append(title);
                     postWrap.append(postDetails);

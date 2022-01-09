@@ -38,7 +38,7 @@ fetch('https://jsonplaceholder.typicode.com/users/')
             userDetails.style.padding='10px';
 
 
-            userDetails.innerText = 'post of current user';
+            userDetails.innerText = 'User details';
             userDetails.href = 'user-details.html?id=' + user.id;
 
             userWrap.append(userId);
